@@ -15,7 +15,7 @@ Lang_chain_Learning/
 │   └── stracture_out/       # Structured output parsing with Pydantic & LangChain
 │
 └── Laing_Chain_Course/      # Hands-on LangChain Course
-    ├── basic_lang_chain.ipynb # Notebook with Groq SDK & LangChain ChatGroq comparison
+    ├── basic_lang_chain.ipynb # Notebook covering Groq SDK, ChatGroq, and init_chat_model
     ├── notes.txt            # Virtual environment and setup notes
     ├── requirements.txt     # Python dependencies
     └── projects/            # Practice projects

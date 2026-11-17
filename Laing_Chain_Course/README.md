@@ -12,7 +12,7 @@ Laing_Chain_Course/
 ├── notes.txt               # Notes on Python virtual environment setup & commands
 ├── requirements.txt        # Recommended Python dependencies
 ├── requirments.txt         # Course package list
-├── .env.example            # Template for environment variables (API keys)
+├── .env.example            # Template for environment variables (API keys & model config)
 ├── .gitignore              # Files and folders excluded from Git version control
 └── projects/               # Directory for upcoming course mini-projects
 ```
@@ -30,6 +30,11 @@ Laing_Chain_Course/
    - Initializing chat models with `ChatGroq`.
    - Invoking models with standard LangChain syntax (`llm.invoke(...)`).
    - Extracting `AIMessage` content and analyzing response metadata (`token_usage`, `finish_reason`).
+
+3. **Universal Model Initialization with `init_chat_model`**:
+   - Initializing chat models uniformly without provider-specific class imports via `langchain.chat_models.init_chat_model`.
+   - Managing `MODEL` and `MODEL_PROVIDER` globally via `.env` configuration.
+   - Using provider-prefix shorthand syntax: `init_chat_model("provider_name:model_id")` (e.g., `init_chat_model("groq:openai/gpt-oss-120b")`).
 
 ---
 
@@ -61,10 +66,12 @@ Copy `.env.example` to `.env`:
 Copy-Item .env.example .env
 ```
 
-Open `.env` and fill in your Groq API key:
+Open `.env` and fill in your configuration:
 
 ```env
 GROQ_API_KEY=your_actual_groq_api_key_here
+MODEL="openai/gpt-oss-120b"
+MODEL_PROVIDER="groq"
 ```
 
 > **Note:** Never commit `.env` or your raw API keys to GitHub. The `.gitignore` file is configured to keep it private.
