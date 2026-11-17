@@ -1,0 +1,10 @@
+ first create  a vertual envoirments   using cmd python -m venv .venv
+then activate the vertual envoirments using cmd    .venv\Scripts\activate  
+
+in the Scripts fold contains activate.bat file which is used to activate the vertual envoirments 
+
+in.venv folder structure 3 main folder python enviroment  Scripts folder lib folder  the 
+in the Include files  contain    tlibraries and pakages which are installed for the project  deactivate vertual envoirments  using cmd   deactivat
+
+  
+lib folder contains python libraries python base files the 
