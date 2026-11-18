@@ -18,7 +18,9 @@ Lang_chain_Learning/
     ├── basic_lang_chain.ipynb # Notebook covering Groq SDK, ChatGroq, and init_chat_model
     ├── notes.txt            # Virtual environment and setup notes
     ├── requirements.txt     # Python dependencies
-    └── projects/            # Practice projects
+    └── projects/            # Practice projects (e.g. RAG_APP with PyPDFLoader & MongoDB)
+        └── RAG_APP/
+            └── main.py      # Document loading and preprocessing pipeline
 ```
 
 ---

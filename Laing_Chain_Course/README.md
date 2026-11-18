@@ -14,8 +14,20 @@ Laing_Chain_Course/
 ├── requirments.txt         # Course package list
 ├── .env.example            # Template for environment variables (API keys & model config)
 ├── .gitignore              # Files and folders excluded from Git version control
-└── projects/               # Directory for upcoming course mini-projects
+└── projects/
+    └── RAG_APP/            # RAG Application pipeline
+        └── main.py         # PyPDF document loader & sanitization logic
 ```
+
+---
+
+## 📚 Projects
+
+### RAG_APP (`projects/RAG_APP/main.py`)
+Retrieval-Augmented Generation (RAG) implementation:
+- **Document Loading**: Extracts pages from PDF documents using `PyPDFLoader` (`langchain_community`).
+- **Data Sanitization & Preprocessing**: Sanitizes and cleans loaded document pages prior to embedding.
+- **Vector Search & Storage**: Prepares data for vector database storage using `langchain_mongodb` / `pymongo`.
 
 ---
 
