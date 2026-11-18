@@ -20,7 +20,8 @@ Lang_chain_Learning/
     ├── requirements.txt     # Python dependencies
     └── projects/            # Practice projects (e.g. RAG_APP with PyPDFLoader & MongoDB)
         └── RAG_APP/
-            └── main.py      # Document loading and preprocessing pipeline
+            ├── main.py      # Document loading and preprocessing pipeline
+            └── load_data.py # Ingestion, metadata tagging, embeddings & MongoDB Atlas Vector Search
 ```
 
 ---

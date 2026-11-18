@@ -16,18 +16,24 @@ Laing_Chain_Course/
 ├── .gitignore              # Files and folders excluded from Git version control
 └── projects/
     └── RAG_APP/            # RAG Application pipeline
-        └── main.py         # PyPDF document loader & sanitization logic
+        ├── main.py         # PyPDF document loader, sanitization & chunking
+        └── load_data.py    # Complete ingestion, metadata tagging, embeddings & MongoDB Atlas Vector Search
 ```
 
 ---
 
 ## 📚 Projects
 
-### RAG_APP (`projects/RAG_APP/main.py`)
-Retrieval-Augmented Generation (RAG) implementation:
-- **Document Loading**: Extracts pages from PDF documents using `PyPDFLoader` (`langchain_community`).
-- **Data Sanitization & Preprocessing**: Sanitizes and cleans loaded document pages prior to embedding.
-- **Vector Search & Storage**: Prepares data for vector database storage using `langchain_mongodb` / `pymongo`.
+### RAG_APP (`projects/RAG_APP/`)
+End-to-end Retrieval-Augmented Generation (RAG) data pipeline:
+- **`main.py`**:
+  - **Document Loading**: Extracts pages from PDF documents using `PyPDFLoader` (`langchain_community`).
+  - **Data Sanitization**: Filters out empty or short pages (e.g., word count < 20).
+  - **Text Chunking**: Breaks text into overlapping segments via `RecursiveCharacterTextSplitter` (`chunk_size=500`, `chunk_overlap=150`).
+- **`load_data.py`**:
+  - **Automated Metadata Tagging**: Uses `create_metadata_tagger` with `ChatOpenAI` function calling to extract title, keywords, and code indicators.
+  - **Voyage AI Embeddings**: Generates high-quality vector embeddings using `voyage-3.5-lite` via `langchain_voyageai`.
+  - **Vector Database Storage**: Stores chunks, metadata, and embeddings into MongoDB Atlas via `MongoDBAtlasVectorSearch`.
 
 ---
 
