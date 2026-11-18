@@ -36,6 +36,13 @@ Laing_Chain_Course/
    - Managing `MODEL` and `MODEL_PROVIDER` globally via `.env` configuration.
    - Using provider-prefix shorthand syntax: `init_chat_model("provider_name:model_id")` (e.g., `init_chat_model("groq:openai/gpt-oss-120b")`).
 
+4. **Model Fallbacks & Core Components**:
+   - Implementing fallback strategies across models using LangChain.
+   - Restricting agent/model behavior under defined conditions.
+
+5. **LangChain Message Types**:
+   - Working with `SystemMessage`, `HumanMessage`, and `AIMessage` to structure prompts and control assistant behavior.
+
 ---
 
 ## 🛠️ Getting Started
