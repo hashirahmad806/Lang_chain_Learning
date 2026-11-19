@@ -30,6 +30,7 @@ End-to-end Retrieval-Augmented Generation (RAG) data pipeline:
   - **Document Loading**: Extracts pages from PDF documents using `PyPDFLoader` (`langchain_community`).
   - **Data Sanitization**: Filters out empty or short pages (e.g., word count < 20).
   - **Text Chunking**: Breaks text into overlapping segments via `RecursiveCharacterTextSplitter` (`chunk_size=500`, `chunk_overlap=150`).
+  - **Metadata Tagging**: Enriches documents with structured schemas (title, keywords, hasCode) using `create_metadata_tagger` and `ChatOpenAI`.
 - **`load_data.py`**:
   - **Automated Metadata Tagging**: Uses `create_metadata_tagger` with `ChatOpenAI` function calling to extract title, keywords, and code indicators.
   - **Voyage AI Embeddings**: Generates high-quality vector embeddings using `voyage-3.5-lite` via `langchain_voyageai`.
