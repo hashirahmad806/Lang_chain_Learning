@@ -111,7 +111,7 @@ embeddings =OpenAIEmbeddings(openai_api_key =key_param.openai_api_key)
 
 vector_store = MongoDBAtlasVectorSearch.from_documents(split_docs , embeddings , collection = collection)
 
-#  How t
+#  How to  improveRAG system in real time, you need an event-driven ingestion pipeline that automatically processes changes as they happen, rather than relying only on scheduled batch jobs (like the cronjobs or scheduled Atlas Triggers
 
 
 
